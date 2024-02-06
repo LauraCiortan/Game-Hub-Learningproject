@@ -1,12 +1,13 @@
-import { Stack, Typography } from "@mui/material";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
-    <Stack direction="row" spacing={2} alignItems={"center"}>
-      <img src={logo} style={{ width: "60px", height: "auto" }} />
-      <Typography style={{ textAlign: "center" }}>NavBar</Typography>
-    </Stack>
+    <HStack justifyContent={"space-between"} padding={"10px"}>
+      <Image src={logo} boxSize={"60px"} />
+      <ColorModeSwitch />
+    </HStack>
   );
 };
 
